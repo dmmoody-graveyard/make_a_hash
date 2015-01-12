@@ -8,5 +8,12 @@ describe(MyHash) do
       test_hash.store("kitten", "cute")
       expect(test_hash.fetch("kitten")).to(eq("cute"))
     end
+
+    it("retrieves the second stored value by its key") do
+      test_hash = MyHash.new()
+      test_hash.store("frog", "mouse")
+      test_hash.store("fish", "tree")
+      expect(test_hash.fetch("frog")).to(eq("mouse"))
+    end
   end
 end
